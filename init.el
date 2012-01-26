@@ -54,6 +54,7 @@
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
  '(smart-tab-disabled-major-modes (quote (org-mode term-mode shell-mode)))
+ '(menu-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
