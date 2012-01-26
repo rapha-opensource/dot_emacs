@@ -1,10 +1,16 @@
-
-(add-to-list 'load-path "/opt/local/share/emacs/site-lisp/color-theme-6.6.0")
- (require 'color-theme)
- (eval-after-load "color-theme"
+(if (string-equal "darwin" (symbol-name system-type))
+    (progn
+      (add-to-list 'load-path "/opt/local/share/emacs/site-lisp/color-theme-6.6.0")
+      (require 'color-theme)
+      (eval-after-load "color-theme"
  	'(progn
- 		(color-theme-initialize)
- 		(color-theme-hober)))
+	   (color-theme-initialize)
+	   (color-theme-hober)))
+  (progn
+;; that one works on most ubuntus with sudo apt-get install emacs-goodies-el
+    (add-to-list 'load-path "/usr/share/emacs/site-lisp/emacs-goodies-el/")
+    (require 'color-theme) 
+    (color-theme-hober)))
 
 ;;; install the undo-tree extension
 (add-to-list 'load-path' "~/repo/undo-tree")
