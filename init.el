@@ -200,5 +200,6 @@
 
 (global-set-key (kbd "A-M-c") 'comment-or-uncomment-region)
 
-(global-set-key [A-f10]         '(lambda () (interactive) (my-key-swap    my-key-pairs)))
-(global-set-key [A-S-f10]       '(lambda () (interactive) (my-key-restore my-key-pairs)))
+(global-set-key (kbd "C-c 0") '(lambda () (interactive) (my-key-swap    my-key-pairs)))
+(global-set-key (kbd "C-c )") '(lambda () (interactive) (my-key-restore my-key-pairs)))
+(my-key-swap my-key-pairs)
